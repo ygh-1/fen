@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <table>
+        <tr>
+            <td>id</td>
+            <td>书名</td>
+            <td>作者</td>
+            <td>出版社</td>
+            <td>价格</td>
+        </tr>
+        <tr th:each="book:${list}">
+            <td th:text="${book.id}">
+            </td>
+            <td th:text="${book.bookName}">
+            </td>
+            <td th:text="${book.bookAuthor}">
+            </td>
+            <td th:text="${book.publisher}">
+            </td>
+            <td th:text="${book.price}">
+            </td>
+        </tr>
+
+    </table>
+
+</div>
+</body>
+</html>
